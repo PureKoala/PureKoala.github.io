@@ -76,7 +76,7 @@
 <p>就比如，通过未发售手机已公布的参数进行对该手机售价的预测，虽然近几年品牌溢价日趋明显，<del>华为P40居然要卖4488就离谱，这是难以预测的，</del>但是我们仍可以通过合理的拟合将误差控制在一个较小的范围内。Regression这种对于结果的预测可以广泛地应用于多种场景之中，对其的学习是学习机器学习过程中很重要的一环。</p>
 <h3 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h3><p>在分类问题中，相反，我们需要将数据划分入不同的分组之中，例如，给定一个有肿瘤病人的各项数据，去判断他的肿瘤是良性的还是恶性的。</p>
 <h2 id="Unsupervised-learning"><a href="#Unsupervised-learning" class="headerlink" title="Unsupervised learning"></a>Unsupervised learning</h2><p>在Unsupervised learning中，我们几乎或者根本不了解结果应该是什么样的，我们可以通过机器学习将这些数据进行分组，而不必知道变量的影响；其与上述Classification之间的区别在于，Classification是已知这些分组的含义以及所需分组的数量，而Unsupervised learning的已知条件只有这些数据的特征，不知道每个分组有着怎样的意义，甚至不知道该分为几组，以下为上述两种分类的简单图示：</p>
-<p><img src="../../../%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%A4%B9/Pictures/Typora%E7%9A%84%E5%9B%BE%E7%89%87/Unsupervised%20learning-1587290889710.png" alt="Unsupervised learning"><img src="../../../%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%A4%B9/Pictures/Typora%E7%9A%84%E5%9B%BE%E7%89%87/Supervised%20learning.png" alt="&lt;!--Supervised learning--&gt;"></p>
+<p>![supervised learning](Machine-Learing-1/Supervised learning.png)</p>
 <p>在接下来的介绍中，在没有特别指明是Unsupervised learning的地方，一律认为都是使用Supervised learning。</p>
 <p>接下来就可以迈出我们计算的第一步了。</p>
 <hr>
@@ -84,10 +84,10 @@
 <p>先以简单的线性回归为例，假设公式为：<br>$$<br>h_{\theta}\left(x^{(i)}\right)=\theta_{0}+\theta_{1} x<br>$$<br>为了避免正负相抵消，求和号内预测结果与实际结果之差需要先求平方再相加；因为共有m个数据，故求和结果需要乘以1/m；而为了后续Gradient decent中对上式求导后所得公式的简便性，将公式再乘以1/2（也就是没啥实际意义，为了好看）。</p>
 <p>Cost function 表征了预测与实际的偏差程度，那么最好的结果当然是通过修改我们的预测来使这个 J 值达到最小，于是如何修改就变成了一个问题，我们先用两种简单的图示来表示一下这个过程：</p>
 <p>1、J对于两个参数的分别的变化曲线（以x前的参数为例）</p>
-<p><img src="../../../%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%A4%B9/Pictures/Typora%E7%9A%84%E5%9B%BE%E7%89%87/1.png" alt="1"></p>
+<p><img src="/.com//../../%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%A4%B9/Pictures/Typora%E7%9A%84%E5%9B%BE%E7%89%87/1.png" alt="1"></p>
 <p>做出J在只改变某一参数的过程中的变化曲线，并选取使得 J 最小的参数。</p>
 <p>2、等高线图</p>
-<p><img src="../../../%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%A4%B9/Pictures/Typora%E7%9A%84%E5%9B%BE%E7%89%87/2.png" alt="2"></p>
+<p><img src="/.com//../../%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%A4%B9/Pictures/Typora%E7%9A%84%E5%9B%BE%E7%89%87/2.png" alt="2"></p>
 <p>在等高线图中，每种颜色的线对应一个 J 的值，这种表示方法可以在一个图中同时反映出两个参数对于预测结果准确度的影响，并且可以直观的看到使 J 最小的坐标点。</p>
 <p><del>wow如此直观，那我还要机器学习干嘛，自己看得了</del></p>
 <p>确实很直观，但是确实没啥用，槽点太多了，就光数据有几亿个的情况，就够你算一辈子的了</p>
