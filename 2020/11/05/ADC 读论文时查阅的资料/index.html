@@ -68,30 +68,30 @@
 
         </div>
         <div class="content markdown">
-            <p><a href="文献/The Race for the Extra Decibel-A Brief Review of Current ADC Performance Trajectories.pdf">Review原文</a></p>
+            <p><a href="ADC 读论文时查阅的资料/The Race for the Extra Decibel-A Brief Review of Current ADC Performance Trajectories.pdf">Review原文</a></p>
 <h3 id="一篇科普-ADC"><a href="#一篇科普-ADC" class="headerlink" title="一篇科普 ADC"></a>一篇科普 <a href="https://www.sohu.com/a/338087058_99990777" target="_blank" rel="noopener">ADC</a></h3><p>1、逐次逼近型ADC(SRA ADC)：<a href="https://blog.csdn.net/weixin_44236962/article/details/109190564" target="_blank" rel="noopener">SRA ADC</a></p>
 <p>2、信噪比：<a href="https://www.cnblogs.com/ytxwzqin/p/10114802.html" target="_blank" rel="noopener">SNR</a></p>
 <p>3、ADC AND RESOLUTION：<a href="https://spectrum-instrumentation.com/en/adc-and-resolution" target="_blank" rel="noopener">RESOLUTION</a></p>
 <p>4、均方根 RMS:root mean square：<a href="https://wiki.seg.org/wiki/RMS_amplitude" target="_blank" rel="noopener">RMS</a></p>
 <p>5、ADC的有效位数（<u>ENOB</u>）与有效分辨率：<a href="https://blog.csdn.net/wordwarwordwar/article/details/56676566?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param" target="_blank" rel="noopener">ENOB</a></p>
-<p>6、SFDR/SNR/SNDR(SINAD)/ENOB辨析：<a href="文献/ADC Key Parameters.pdf">辨析1</a>       <a href="文献/SINAD ENOB SNR等辨析.pdf">辨析2</a></p>
+<p>6、SFDR/SNR/SNDR(SINAD)/ENOB辨析：<a href="ADC 读论文时查阅的资料/ADC Key Parameters.pdf">辨析1</a>       <a href="ADC 读论文时查阅的资料/SINAD ENOB SNR等辨析.pdf">辨析2</a></p>
 <blockquote>
 <p>来自百度：</p>
 <p>信噪比就是信号能量和量化噪声能量之比，但是这对于adc来说只是理想情况，即只考虑量化噪声，而实际情况是热噪声，量化噪声以及谐波失真都在干扰信号，于是实际测量AD性能的时候用的更多的是SNDR（信噪失真比），即信号与（热噪声，量化噪声以及谐波失真能量之和）的比值。可以将量化后的信号进行fft分析后计算得到。这个量用于衡量ADC转换时候信号被噪声影响了多少。<br>而SFDR（无杂散动态范围）是fft分析频谱中信号幅度与最大谐波之间的距离（可以直接从频谱图中读出），这个距离越大，说明ADC的动态性能越好，就是说转换越接近线性。<br>一般来说SFDR的值会远大与SNDR，而当趋于理想情况时SNDR≈SNR，大概就是这么个关系。</p>
 </blockquote>
 <p>7、FOM</p>
-<p>8、Time-Interleaved ADC：<a href="文献/Time-Interleaved Analog-to-Digital converters Status and future directions.pdf">TIA-英文</a>    <a href="文献/The-ABCs-of-Interleaved-ADCs.pdf">TIA-中文</a></p>
+<p>8、Time-Interleaved ADC：<a href="ADC 读论文时查阅的资料/Time-Interleaved Analog-to-Digital converters Status and future directions.pdf">TIA-英文</a>    <a href="ADC 读论文时查阅的资料/The-ABCs-of-Interleaved-ADCs.pdf">TIA-中文</a></p>
 <p>9、（突发奇想）一个知乎答主：<a href="https://www.zhihu.com/people/pi-te-60/posts?page=1" target="_blank" rel="noopener">放大器、电容、电感、振荡器、变压器</a></p>
-<p>10、<a href="http://onmyphd.com/?p=analog.digital.converter" target="_blank" rel="noopener">各种ADC综述</a> <a href="文献/Analog-Digital Converters (ADC">PDF备份</a> - A Tutorial with types of converters, their circuits and interactive examples.pdf)（下列为某些类型的详细理解用）<a href="文献/ADC Architectures - Analog Devices Tutorials ALL.pdf">一个超详细的pdf</a></p>
+<p>10、<a href="http://onmyphd.com/?p=analog.digital.converter" target="_blank" rel="noopener">各种ADC综述</a> <a href="ADC 读论文时查阅的资料/Analog-Digital Converters (ADC">PDF备份</a> - A Tutorial with types of converters, their circuits and interactive examples.pdf)（下列为某些类型的详细理解用）<a href="ADC 读论文时查阅的资料/ADC Architectures - Analog Devices Tutorials ALL.pdf">一个超详细的pdf</a></p>
 <ul>
 <li><a href="https://www.electronics-tutorial.net/analog-integrated-circuits/data-converters/dual-slope-type-adc/" target="_blank" rel="noopener">Dual-Slope ADC</a></li>
-<li><a href="Dual-Slope ADC">Dual-Slope ADC一份中文描述</a></li>
+<li><a href="ADC 读论文时查阅的资料/Dual-Slope ADC.pdf">Dual-Slope ADC一份中文描述</a></li>
 <li><a href="https://www.allaboutcircuits.com/technical-articles/understanding-the-delta-sigma-analog-to-digital-converter/" target="_blank" rel="noopener">Sigma-Delta ADC + 该博主其他文章</a></li>
 <li><a href="https://www.maximintegrated.com/en/design/technical-documents/tutorials/1/1870.html" target="_blank" rel="noopener">Sigma-Delta ADC 2</a></li>
-<li><a href="文献/ADC-pipeline_lecture.pdf">Pipline</a></li>
-<li><a href="文献/the-right-adc-architecture.pdf">choose the right ADC</a></li>
+<li><a href="ADC 读论文时查阅的资料/ADC-pipeline_lecture.pdf">Pipline</a></li>
+<li><a href="ADC 读论文时查阅的资料/the-right-adc-architecture.pdf">choose the right ADC</a></li>
 </ul>
-<p>11、<a href="文献/A Survey of ADC Performance Evolution.pdf">ADC 研究现状</a></p>
+<p>11、<a href="ADC 读论文时查阅的资料/A Survey of ADC Performance Evolution.pdf">ADC 研究现状</a></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
