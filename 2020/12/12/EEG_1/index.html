@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>EEG_1 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="图1
+
+EEG_1做BCI一直是自己的兴趣，大一时候零零散散的读过不少paper，不过都没有成体系，总是东一榔头西一棒槌，到最后也只是了解了一个大概，起不到任何的作用。虽然专业不能对未来的方向起到决,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">EEG_1</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">EEG_1</h1>
+        <div class="stuff">
+            <span>十二月 12, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/EEG/" rel="tag">EEG</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E8%84%91%E7%94%B5/" rel="tag">脑电</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <center>图1</center>
+
+<h1 id="EEG-1"><a href="#EEG-1" class="headerlink" title="EEG_1"></a>EEG_1</h1><p>做BCI一直是自己的兴趣，大一时候零零散散的读过不少paper，不过都没有成体系，总是东一榔头西一棒槌，到最后也只是了解了一个大概，起不到任何的作用。虽然专业不能对未来的方向起到决定性的作用，但我还是计划先结合自己的专业，从采集开始做起；我清晰的知道自己一定逃不开算法，但不从算法入手也是我最后的倔强了吧。最后，这个系列一定不鸽！</p>
+<h2 id="What-is-EEG"><a href="#What-is-EEG" class="headerlink" title="What is EEG?"></a>What is EEG?</h2><p>脑电图（Electroencephalogram,EEG）是通过精密的电子仪器，从头皮上将脑部自发性的生物电位加以放大记录而获得的图形，是通过电极记录下来的脑细胞群的自发性、节律性电活动。（记录装置有侵入型、半侵入型和非侵入型之分）</p>
+<p>所谓自发自发性生物电位就是指动作电位（Action Potentials），是由于外界刺激或体内细胞活动导致产生的电信号，这里就不做解释的将兴奋性突触后电位（excitatory post-synaptic potential，EPSP）的细节图放在这里，如图1：</p>
+<p><img src="/2020/12/12/EEG_1/图1.png" alt="图1" title="图1"></p>
+<center>图1</center>
+
+<p>与EPSP相互对应的还有抑制性突触后电位（inhibitory post-synaptic potential，IPSP），这两种电位在连续时间上的交替出现构成了我们所测量到的电位变化图；从人体内一个细胞的角度来看，通过细胞内微电极记录的神经元膜电位变化和电流流动，我们很容易通过推广理解一个动作电位的变化及传递过程，图2为前一个细胞产生EPSP或IPSP时该细胞产生电位及释放递质的示意:</p>
+<p><img src="/2020/12/12/EEG_1/图2.png" alt="图1" title="图2"></p>
+<center>图2</center>
+
+<p>通过简单的描述，我们大概清楚了动作电位的产生以及传递的过程；我们要分析的是脑电，那么既然知道了是有电位产生的，我们接下来的任务就是记录并分析了。</p>
+<h2 id="记录EEG时电极的常见分布"><a href="#记录EEG时电极的常见分布" class="headerlink" title="记录EEG时电极的常见分布"></a>记录EEG时电极的常见分布</h2><p>在检测脑电信号时，我们最常采用的是10-20系统电极放置法。</p>
+<p><u><strong><em>10-20系统电极放置法</em></strong></u>是国际脑电图学会规定的标准电极放置法。额极中点至鼻根的距离和枕点至枕外粗隆的距离各占此连线全长的10％，其余各点均以此连线全长的20％相隔，如图3所示。因此命名为10-20系统。</p>
+<p><img src="/2020/12/12/EEG_1/图3.jpg" alt="图3"></p>
+<center>图3</center>
+
+<p>先不说为什么叫10-20系统，我们先来理解一下其中字母数字代表的含义：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th>分类及含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">数字</td>
+<td>左脑单数，右脑双数；<br>“/“代表中间（C3/T3之两点之间的中间点）</td>
+</tr>
+<tr>
+<td style="text-align:center">字母</td>
+<td>F：额叶（Frontal lobe）<br>Fp：前额叶（Frontal poles）<br>T：颞叶（Temporal lobes）<br>O：枕叶（Occipital lobes）<br>P：顶叶（Parietal lobes）<br>C：中心部（Central）<br>Z：零点（Zero）<br></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>详细来说，其排布服从以下规则：</p>
+<blockquote>
+<p>10-20系统的电极位置主要以颅骨为参照，并不因个人头围或头型的差异而有所不同。10-20系统电极位置描述如下：</p>
+<ol>
+<li>前后矢状线：从鼻根至枕外粗隆取一连线，在此线上，由前至后标出5个点，依次命名为：额极中点（Fpz）、额中点（Fz）、中央点（Cz）、顶点（Pz）、枕点（Oz）。额极中点至鼻根的距离和枕点至枕外粗隆的距离各占此连线全长的10％，其余各点均以此连线全长的20％相隔。</li>
+<li>横位：从左耳前点（耳屏前颧弓根凹陷处）通过中央点至右耳前点取一连线，在此连线的左右两侧对称标出左颞中（T3）、右颞中（T4）、左中央（C3）、右中央（C4）。T3、T4点与耳前点的距离各占此线全长的10％，其余各点（包括Cz点）均以此连线全长的20％相隔。</li>
+<li>侧位：从Fpz点向后通过T3、T4点至枕点分别取左右侧连线，在左右侧连线上由前至后对称地标出左额极（Fp1 ）、右额极（Fp2 ）、左前颞（F7）、右前颞（F8）、左后颞（T5）、右后颞（T6）、左枕（O1）、右枕（O2）各点。Fp1 、Fp2点至额极中点（Fpz ）的距离与O1、O2点至Oz点的距离各占此连线全长的10％，其余各点（包括T3、T4）均以此连线全长的20％相隔。</li>
+<li>其余的左额（F3）、右额（F4）点分别位于Fp1、Fp2与C3、C4点的中间；左顶（P3）、右顶（P4）点分别位于C3、C4与O1、O2点的中间。</li>
+</ol>
+</blockquote>
+<p>除了国际标准的10-20系统以外，还有：</p>
+<ul>
+<li><strong>10-10系统</strong>：在10-20系统提出修正和增补，共有81个电极点，包含之前的21个电极点，每个电极相距10%的距离</li>
+<li><strong>10-5系统</strong>：为了进一步提高空间分辨率而设计出的，使用128个甚至更多的电极进行记录</li>
+<li>其他方法，例如<strong>Gibbs法、Arid法、Gastaut法、Bickford法</strong>等，但是多用于医院临床和基础脑电研究，日常使用的便利性较差</li>
+</ul>
+<p>多种电极的可参考<a href="电极放置_1.pdf">电极放置文献</a></p>
+<p>那么我们记录到了我们头皮上多个点位的电位，下一步就是考虑如何将其呈现为一种有特征的形式以便于进行分析了。</p>
+<h2 id="Montages"><a href="#Montages" class="headerlink" title="Montages"></a>Montages</h2><p>记录单独一个电极的电位变化情况是没有意义的，因为这样无法突出不同脑区之间的差异性，也就无法对整体其进行分析。在脑电分析中，我们通常使用差分放大器测量两个不同信号的电压之差，并将此结果作为一个EEG活动的通道（channel）。上述过程被称为Montages，</p>
+<p>国际临床神经生理学会IFCN对于Montage的英文定义为：</p>
+<blockquote>
+<p><em>The arrangement or array of channels on the EEG machine display, defined by the exploring and reference electrodes.</em></p>
+</blockquote>
+<p>即电极的导联组合。我们通常使用的Montages主要有以下几种：</p>
+<h3 id="Bipolar-Montages"><a href="#Bipolar-Montages" class="headerlink" title="Bipolar Montages"></a>Bipolar Montages</h3><p>Bipolar Montage记录的是头皮上两个不同电极信号之间的差异。Bipolar Montage通常比较的是某一条电极连线上每对相邻电极之间的电位差，根据选取连线的方式不同，可以分为以下三种：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bipolar montage</td>
+<td style="text-align:center">选取从额叶到枕叶（即从前到后）的电极连线,并将连线上的电极逐个对比，示意图及产生的对比结果如下图：<br><img src="/2020/12/12/EEG_1/图4.png" alt="图4" title="图4"></td>
+</tr>
+<tr>
+<td style="text-align:center">transverse bipolar montage</td>
+<td style="text-align:center">选取从左边到右边的电极连线（例如从左耳到右耳，或Fp1-Fz-Fp2连线均可），并将连线上的电极逐个对比，示意图及产生的对比结果如下图：<br><img src="/2020/12/12/EEG_1/图5.png" alt="图5" title="图5"></td>
+</tr>
+<tr>
+<td style="text-align:center">triangular bipolai montage</td>
+<td style="text-align:center">一组由三个呈三角形放置的、互相距离相等的电极成对组配成的导联。用于脑瘤患者，在头皮电极组成的等边三角形导联根据尖波、棘波、慢波或综合波所在导联进行定位，故又称“三角定位法”。该方法仅为对病理波部位进行定侧、定位的方法之一，只是在已发现异常时，增加一种显示的方式，本身不具有活化作用。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>本种方法不使用参考电极，只选取两个位于头皮上的电极，这样可以大大减少干扰，并可能排除无关电极引起的误差。</p>
+<h3 id="Common-Reference-Montage"><a href="#Common-Reference-Montage" class="headerlink" title="Common Reference Montage"></a>Common Reference Montage</h3><p>在使用Common Reference Montage的方法下，每次差分放大器记录的为头皮电极与参考电极之间的差异，在实验中，我们经常使用Cz或者A1、A2作为参考电极，该种方法的示意图及输出样例如图6所示：</p>
+<p><img src="/2020/12/12/EEG_1/图6.png" alt="图6" title="图6"></p>
+<center>图6</center>
+
+
+
+
+
+<h3 id="Common-Average-Reference-Montage"><a href="#Common-Average-Reference-Montage" class="headerlink" title="Common Average Reference Montage"></a>Common Average Reference Montage</h3><p>在采用本种方法时，我们会将一个电极的电位与其他所有电极电位的均值进行比较，如图七所示，我们在计算F7的Common Average Reference Montage时，会比较F7的电位和除F7外所有电极电位的均值：</p>
+<p><img src="/2020/12/12/EEG_1/图7.png" alt="图7" title="图7"></p>
+<center>图7</center>
+
+<p>但是，由于Fp1和Fp2容易出现眼动伪迹（主要来自于眼球的移动以及眨眼），以及O1和O2容易出现头动伪迹（<em>head movement artifact</em>），我们一般将其从用于取均值的电极总体中除去，得到结果如图8所示：</p>
+<p><img src="/2020/12/12/EEG_1/图8.png" alt="图8" title="图8"></p>
+<center>图8</center>
+
+<p>但是在使用Common Average Reference Montage时必然有出现reference contamination的可能性，即如图9右侧所示，如果C3、Cz、C4处的负值非常大，就会拉低均值整体的大小，导致如图9左侧所示的，所有信号对于均值都有一个相对的正电压，导致本次记录的数据无效。</p>
+<p><img src="/2020/12/12/EEG_1/图9.png" alt="图9" title="图9"></p>
+<center>图9</center>
+
+<p>为了解决本方法的固有问题，就开发出了Laplacian Montage。</p>
+<h3 id="Laplacian-Montage"><a href="#Laplacian-Montage" class="headerlink" title="Laplacian Montage"></a>Laplacian Montage</h3><p>在最简单的定义情况下，本种方式是将一个信号与其距离最近的信号的平均值相比较，如图10所示，T7与F7-C3-P7的均值进行比较：</p>
+<p><img src="/2020/12/12/EEG_1/图10.png" alt="图10" title="图10"></p>
+<center>图10</center>
+
+<p>在存在reference contamination的情况中，本种方法就能很好的体现出其自身的作用，如图11右侧所示。在2处每个电极信号都出现了同样的波形，这样通过Common Average Reference是无法将eference contamination消除的，也就无法队这个时间段的信号进行分析，而如果使用Laplacian方法，就可以如图11右所示的得到一个平坦的图像，仅凭肉眼就可以看出此电位是由F8处产生的，极大的方便了后续的分析。</p>
+<p><img src="/2020/12/12/EEG_1/图11.png" alt="图11" title="图11"></p>
+<center>图11</center>
+
+<p>但是Laplacian Montage对于广泛分布的异常信号的处理能力较差，有些时候无法帮我我们准确地找到出现异常的电极位置，此时可以使用一个距离异常电极区域较远的电极作为参考电极，这样一般情况下可以获得的较好的效果。</p>
+<p>但我们通常不会在EEG的分析中使用本种方法，主要是因为本方法没有办法被很好地定义，无法产生一套普遍的标准。</p>
+<p>最后，我们通过一张图来总结一下各种Montages的优缺点：</p>
+<p><img src="/2020/12/12/EEG_1/图12.png" alt="图12" title="图12"></p>
+<center>图12</center>
+
+
+
+<p>本次的EEG的一个最简单的入门介绍就到这里了！</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='//music/BGM.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>
