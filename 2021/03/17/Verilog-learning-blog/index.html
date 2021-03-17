@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Verilog learning blog - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="Verilog learning blogData TypeBasic Type:
+123456input clock;output req;inout enable; //bi-direction,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">Verilog learning blog</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Verilog learning blog</h1>
+        <div class="stuff">
+            <span>三月 17, 2021</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Verilog/" rel="tag">Verilog</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="tag">自学笔记</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="Verilog-learning-blog"><a href="#Verilog-learning-blog" class="headerlink" title="Verilog learning blog"></a>Verilog learning blog</h1><h2 id="Data-Type"><a href="#Data-Type" class="headerlink" title="Data Type"></a>Data Type</h2><p><strong>Basic Type:</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">input</span> clock;</span><br><span class="line"><span class="keyword">output</span> req;</span><br><span class="line"><span class="keyword">inout</span> enable; <span class="comment">//bi-direction port</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// vector signals</span></span><br><span class="line"><span class="keyword">inout</span> [<span class="number">7</span>:<span class="number">0</span>] address;</span><br></pre></td></tr></table></figure>
+<p><strong>Data Type:</strong></p>
+<p>Driver:</p>
+<ul>
+<li>a driver is a data type which can drive a load</li>
+<li>driver that can store a value (eg: flip-flop)</li>
+<li>driver that can’t store value, but connects two points (eg: wire)</li>
+</ul>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// reg -- register</span></span><br><span class="line"><span class="comment">// wire</span></span><br><span class="line"><span class="comment">// example:</span></span><br><span class="line"><span class="keyword">wire</span> and_gate_output; <span class="comment">// "and_gate_output" is a wire that only outputs</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">reg</span> d_flip_flop_output; <span class="comment">// "d_flip_flop_output" is a register; it stores and outputs a value</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">reg</span> [<span class="number">7</span>:<span class="number">0</span>] address_bus; <span class="comment">// "address_bus" is a little-endian 8-bit register</span></span><br></pre></td></tr></table></figure>
+<h2 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>Operator Type</strong></th>
+<th><strong>Operator Symbol</strong></th>
+<th><strong>Operation Performed</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Arithmetic</strong></td>
+<td>*</td>
+<td>Multiply</td>
+</tr>
+<tr>
+<td></td>
+<td>/</td>
+<td>Division</td>
+</tr>
+<tr>
+<td></td>
+<td>+</td>
+<td>Add</td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>Subtract</td>
+</tr>
+<tr>
+<td></td>
+<td>%</td>
+<td>Modulus</td>
+</tr>
+<tr>
+<td></td>
+<td>+</td>
+<td>Unary plus</td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>Unary minus</td>
+</tr>
+<tr>
+<td><strong>Logical</strong></td>
+<td>!</td>
+<td>Logical negation</td>
+</tr>
+<tr>
+<td></td>
+<td>&amp;&amp;</td>
+<td>Logical and</td>
+</tr>
+<tr>
+<td></td>
+<td>\</td>
+<td>\</td>
+<td></td>
+<td>Logical or</td>
+</tr>
+<tr>
+<td><strong>Relational</strong></td>
+<td>&gt;</td>
+<td>Greater than</td>
+</tr>
+<tr>
+<td></td>
+<td>&lt;</td>
+<td>Less than</td>
+</tr>
+<tr>
+<td></td>
+<td>&gt;=</td>
+<td>Greater than or equal</td>
+</tr>
+<tr>
+<td></td>
+<td>&lt;=</td>
+<td>Less than or equal</td>
+</tr>
+<tr>
+<td><strong>Equality</strong></td>
+<td>==</td>
+<td>Equality</td>
+</tr>
+<tr>
+<td></td>
+<td>!=</td>
+<td>inequality</td>
+</tr>
+<tr>
+<td><strong>Reduction</strong></td>
+<td>~</td>
+<td>Bitwise negation</td>
+</tr>
+<tr>
+<td></td>
+<td>~&amp;</td>
+<td>nand</td>
+</tr>
+<tr>
+<td></td>
+<td>\</td>
+<td></td>
+<td>or</td>
+</tr>
+<tr>
+<td></td>
+<td>~\</td>
+<td></td>
+<td>nor</td>
+</tr>
+<tr>
+<td></td>
+<td>^</td>
+<td>xor</td>
+</tr>
+<tr>
+<td></td>
+<td>^~</td>
+<td>xnor</td>
+</tr>
+<tr>
+<td></td>
+<td>~^</td>
+<td>xnor</td>
+</tr>
+<tr>
+<td><strong>Shift</strong></td>
+<td>&gt;&gt;</td>
+<td>Right shift</td>
+</tr>
+<tr>
+<td></td>
+<td>&lt;&lt;</td>
+<td>Left shift</td>
+</tr>
+<tr>
+<td><strong>Concatenation</strong></td>
+<td>{ }</td>
+<td>Concatenation</td>
+</tr>
+<tr>
+<td><strong>Conditional</strong></td>
+<td>?</td>
+<td>conditional</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Control-Statements"><a href="#Control-Statements" class="headerlink" title="Control Statements"></a>Control Statements</h2><ul>
+<li><p><strong>if-else</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (enable == <span class="number">1'b1</span>)  <span class="keyword">begin</span></span><br><span class="line">    data=<span class="number">10</span>;</span><br><span class="line">    address=<span class="number">16'hDEAD</span>;</span><br><span class="line">    wr_enable=<span class="number">1'b1</span>;</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">else</span> <span class="keyword">begin</span></span><br><span class="line">    data=<span class="number">32'b0</span>; <span class="comment">// Decimal assigned</span></span><br><span class="line">    wr_able=<span class="number">1'b0</span>; <span class="comment">// Hexadecimal</span></span><br><span class="line">    address=address+<span class="number">1</span>; <span class="comment">// Binary</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p><strong>Case</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span>(address)</span><br><span class="line">    <span class="number">0</span> : <span class="built_in">$display</span>(<span class="string">"0"</span>);</span><br><span class="line">    <span class="number">1</span> : <span class="built_in">$display</span>(<span class="string">"1"</span>);</span><br><span class="line">    <span class="number">2</span> : <span class="built_in">$display</span>(<span class="string">"2"</span>);</span><br><span class="line">    <span class="keyword">default</span> : <span class="built_in">$display</span>(<span class="string">"Need to complete"</span>);</span><br><span class="line"><span class="keyword">endcase</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p><strong>While</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> counter(clk,rst,enable,count);</span><br><span class="line">	<span class="keyword">input</span> clk,rst,enable;</span><br><span class="line">    <span class="keyword">output</span>[<span class="number">3</span>:<span class="number">0</span>] count;</span><br><span class="line">    <span class="keyword">reg</span>[<span class="number">3</span>:<span class="number">0</span>] count;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">always</span> @ (<span class="keyword">posedge</span> clk <span class="keyword">or</span> <span class="keyword">posedge</span> rst)</span><br><span class="line">        <span class="keyword">if</span> (rst) <span class="keyword">begin</span></span><br><span class="line">            count&lt;=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">end</span> <span class="keyword">else</span> <span class="keyword">begin</span>: COUNT</span><br><span class="line">            <span class="keyword">while</span> (enable) <span class="keyword">begin</span></span><br><span class="line">                count &lt;= count+<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">disable</span> COUNT;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+<p>All blocks marked always will run - simultaneously - when one or more of the conditions listed within it is fulfilled.</p>
+</li>
+<li><p><strong>For loop</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">16</span>;i=i+<span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">    <span class="built_in">$display</span> (<span class="string">"Current value of i is %d"</span>,i);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Repeat</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">repeat</span> (<span class="number">16</span>) <span class="keyword">begin</span></span><br><span class="line">    <span class="built_in">$display</span> (<span class="string">"Current value of i is %d"</span>,i);</span><br><span class="line">    i=i+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Variable-Assignment"><a href="#Variable-Assignment" class="headerlink" title="Variable Assignment"></a>Variable Assignment</h2><ul>
+<li><p><strong>Initial Blocks</strong></p>
+<p>An initial block, as the name suggests, is executed only once when simulation starts.</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">initial</span> <span class="keyword">begin</span></span><br><span class="line">    clk=<span class="number">0</span>;</span><br><span class="line">    reset=<span class="number">0</span>;</span><br><span class="line">    req_0=<span class="number">0</span>;</span><br><span class="line">    req_1=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Always Blocks</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A 2:1 mux</span></span><br><span class="line"><span class="comment">// level sensitive</span></span><br><span class="line"><span class="keyword">always</span> @(a <span class="keyword">or</span> b <span class="keyword">or</span> sel)</span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(sel==<span class="number">0</span>)<span class="keyword">begin</span></span><br><span class="line">            y=a;</span><br><span class="line">        <span class="keyword">end</span> <span class="keyword">else</span> <span class="keyword">begin</span></span><br><span class="line">            y=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2:1 mux but output is now a flip-flop output</span></span><br><span class="line"><span class="comment">// edge sensitive</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> clk)</span><br><span class="line">    <span class="keyword">if</span>(reset==<span class="number">0</span>)<span class="keyword">begin</span></span><br><span class="line">        y&lt;=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">else</span> <span class="keyword">if</span> (sel==<span class="number">0</span>) <span class="keyword">begin</span></span><br><span class="line">        y&lt;=a;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">else</span> <span class="keyword">begin</span></span><br><span class="line">        y&lt;=b;</span><br><span class="line">    <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>an always block executes always</p>
+</li>
+<li><p>an always block should have a sensitive list or a delay associated with it</p>
+</li>
+<li><p>The sensitive list is the one which tells the always block when to execute the block of code</p>
+</li>
+<li><p><strong>One important note about always block: it can not drive wire data type, but can drive reg and integer data types.</strong></p>
+</li>
+<li><p>the code inside always blocks needs to be executed whenever the input variables (or output controlling variables) change</p>
+</li>
+<li><p>There are two types of sensitive list: level sensitive (for combinational circuits) and edge sensitive (for flip-flops).</p>
+</li>
+<li><p><strong>In the case of combinational logic we had “=” for assignment, and for the sequential block we had the “&lt;=” operator.  “=” is blocking assignment and “&lt;=” is nonblocking assignment. “=” executes code sequentially inside a begin / end, whereas nonblocking “&lt;=” executes in parallel.(组合逻辑用“=”，时序逻辑用“&lt;=”)</strong></p>
+</li>
+<li><p>sensitive list is not imperitive</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">always</span> <span class="keyword">begin</span></span><br><span class="line">    #<span class="number">5</span> clk=~clk;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>but in this case we need to have a delay</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Assignment Statement</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a tri-state buffer</span></span><br><span class="line"><span class="keyword">assign</span> out = (enable)?data:<span class="number">1'bz</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//buffer</span></span><br><span class="line"><span class="keyword">assign</span> out = data;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>used only for combinational logical</li>
+<li>it is executed continuously, there is no sensitive list</li>
+</ul>
+</li>
+</ul>
+<h2 id="Task-and-Function"><a href="#Task-and-Function" class="headerlink" title="Task and Function"></a>Task and Function</h2><ul>
+<li>Functions and tasks have the same syntax; one difference is that tasks can have delays, whereas functions can not have any delay. This means that function can be used for modeling combinational logic.</li>
+<li>A second difference is that functions can return a value, whereas tasks can not.</li>
+</ul>
+<blockquote>
+<p>task和function的不同点：<br>　　(1):  function只能与主模块共用一个仿真时间单位，而task可以定义自己的仿真时间单位；<br>　　(2):  function不能调用任务，而task可以调用函数；<br>　　(3):  function至少需要一个输入变量，而task可以没有或者有很多个任意类型的变量；<br>　　(4):  function返回一个值，而task则不返回值。</p>
+</blockquote>
+<ul>
+<li><p>Task</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Definition</span></span><br><span class="line"><span class="keyword">task</span> &lt;<span class="keyword">task</span> name&gt;;</span><br><span class="line"> &lt;port <span class="keyword">and</span> data <span class="keyword">type</span> declare&gt;;</span><br><span class="line"> &lt;statement <span class="number">1</span>&gt;;</span><br><span class="line"> &lt;statement <span class="number">2</span>&gt;;</span><br><span class="line"> &lt;statement <span class="number">3</span>&gt;;</span><br><span class="line"> ...</span><br><span class="line"> <span class="keyword">endtask</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">// Example</span></span><br><span class="line"><span class="keyword">module</span> traffic_lights;</span><br><span class="line"> <span class="keyword">reg</span> clock;</span><br><span class="line"> <span class="keyword">reg</span> red;</span><br><span class="line"> <span class="keyword">reg</span> amber;</span><br><span class="line"> <span class="keyword">reg</span> green;</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">parameter</span>  on = <span class="number">1</span>, </span><br><span class="line">            off = <span class="number">0</span>,</span><br><span class="line">            red_tics = <span class="number">350</span>,</span><br><span class="line">            amber_tics = <span class="number">30</span>,</span><br><span class="line">            green_tics = <span class="number">200</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//交通灯初始化</span></span><br><span class="line"> <span class="keyword">initial</span> red=off;</span><br><span class="line"> <span class="keyword">initial</span> amber=off;</span><br><span class="line"> <span class="keyword">initial</span> green=off;</span><br><span class="line"><span class="comment">//交通灯控制时序</span></span><br><span class="line"><span class="keyword">always</span> <span class="keyword">begin</span></span><br><span class="line"> red=on; <span class="comment">//开红灯</span></span><br><span class="line"> light(red,red_tics); <span class="comment">//调用等待任务</span></span><br><span class="line"> green=on; <span class="comment">//开绿灯</span></span><br><span class="line"> light(green,green_tics); <span class="comment">//等待</span></span><br><span class="line"> amber=on; <span class="comment">//开黄灯</span></span><br><span class="line"> light(amber,amber_tics); <span class="comment">//等待</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">//定义交通灯开启时间的任务</span></span><br><span class="line"><span class="keyword">task</span> light（color,tics);</span><br><span class="line"> <span class="keyword">output</span> color;</span><br><span class="line"> <span class="keyword">input</span>[<span class="number">31</span>:<span class="number">0</span>] tics;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">begin</span></span><br><span class="line">  <span class="keyword">repeat</span>(tics) @(<span class="keyword">posedge</span> clock);<span class="comment">//等呆tics个时钟的上升沿</span></span><br><span class="line">  color=off;<span class="comment">//关灯</span></span><br><span class="line"> <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endtask</span></span><br><span class="line"><span class="comment">//产生时钟脉冲的always块</span></span><br><span class="line"><span class="keyword">always</span> <span class="keyword">begin</span></span><br><span class="line"> #<span class="number">100</span> clock=<span class="number">0</span>;</span><br><span class="line"> #<span class="number">100</span> clock=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Function</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Definition</span></span><br><span class="line"><span class="keyword">function</span> &lt;<span class="keyword">return</span> <span class="keyword">type</span> <span class="keyword">and</span> scope&gt; (<span class="keyword">function</span> name);</span><br><span class="line">&lt;port define&gt;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"> &lt;statement&gt;;</span><br><span class="line"> ...</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Example</span></span><br><span class="line"><span class="keyword">module</span> tryfact;</span><br><span class="line"> <span class="comment">//函数定义------------------------------</span></span><br><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] factorial;</span><br><span class="line"> <span class="keyword">input</span> [<span class="number">3</span>:<span class="number">0</span>] operand;</span><br><span class="line"> <span class="keyword">reg</span> [<span class="number">3</span>:<span class="number">0</span>] index;</span><br><span class="line"> <span class="keyword">begin</span></span><br><span class="line">  factorial = operand ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(index = <span class="number">2</span>; index &lt;= operand; index = index + <span class="number">1</span>)</span><br><span class="line">  factorial = index * factorial;</span><br><span class="line"> <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br><span class="line"><span class="comment">//函数的测试----------------------------------</span></span><br><span class="line"> <span class="keyword">reg</span> [<span class="number">31</span>:<span class="number">0</span>] result;</span><br><span class="line"> <span class="keyword">reg</span> [<span class="number">3</span>:<span class="number">0</span>] n;</span><br><span class="line"><span class="keyword">initial</span> <span class="keyword">begin</span></span><br><span class="line"> result = <span class="number">1</span>;</span><br><span class="line"> <span class="keyword">for</span> (n = <span class="number">2</span>; n &lt; <span class="number">9</span>; n = n + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">  <span class="built_in">$display</span> (<span class="string">"Partial result n = %d result = %d"</span>,n,result);</span><br><span class="line">  result = n * factorial(n)/((n*<span class="number">2</span>) + <span class="number">1</span>);</span><br><span class="line"> <span class="keyword">end</span></span><br><span class="line"> <span class="built_in">$display</span> (<span class="string">"Finalresult = %d"</span>,result);</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">endmodule</span><span class="comment">//模块结束</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>函数定义不能包含任何的时间控制语句，即#、@或者wait</li>
+<li>函数不可启动任务</li>
+<li>定义函数时至少需要一个输入参量</li>
+<li>在函数的定义中，必须有一条赋值语句给函数中的一个内部变量赋以函数的结果值，该内部变量与函数具有相同的名字</li>
+</ul>
+</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='//music/BGM.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>
